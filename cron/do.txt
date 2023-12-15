@@ -10,6 +10,7 @@
 0 6 * * * ~/rec.sh start 64800
 */10 * * * * ~/sync.sh
 */10 * * * * termux-microphone-record -i >> ~/rec.log
+*/10 * * * * ls -Slahr ~/ > ~/recListDir.txt
 */20 * * * * rclone sync ~/rec* dropboxRec:RecDo --log-file=~/rclone_log.txt --log-level INFO
 */20 * * * * rclone sync ~/Cron* dropboxRec:RecDo --log-file=~/rclone_log.txt --log-level INFO
 */20 * * * * rclone sync ~/sync* dropboxRec:RecDo --log-file=~/rclone_log.txt --log-level INFO
