@@ -7,7 +7,7 @@
 
 #Fails: 41 2 8 12 * termux-microphone-record -f ~/rec_$(date +%d%m%Y_%H%M).m4a -l 43200
 
-45 6 * * * ~/rec.sh start 64800
+50 6 * * * ~/rec.sh start 64800
 */10 * * * * ~/sync.sh 
 
 #0 2 * * * ~/bin/sync.sh 
