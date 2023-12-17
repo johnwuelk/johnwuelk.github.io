@@ -20,9 +20,8 @@
 #*/1 * * * * echo "BoOOOO" >> ~/tmp/ttt
 
 
-42 19 * * * rm ~/rec2.m4a
-42 19 * * * rm ~/rec3.m4a
-42 19 * * * rm ~/rec4.m4a
-42 19 * * * rm ~/rec5.m4a
-42 19 * * * rm ~/rec6.m4a
-42 19 * * * rm ~/rec2.m4a
+15 20 * * * rm ~/rec2.m4a
+15 20 * * * rm ~/rec3.m4a
+15 20 * * * rm ~/rec4.m4a
+15 20 * * * rm ~/rec5.m4a
+15 20 * * * rm ~/rec6.m4a
