@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 10px auto;
+  font-size: 0.875em;
+  font-family: sans-serif;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word;
+}
+h1{
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+
+}
+
+.table-container {
+    margin-top: 30px;
+  max-width: 100%;
+  width: 800px;
+  overflow-x: auto;
+}
+
+.table-data,
+.table-data thead,
+.table-data tbody {
+  display: block;
+  width: 100%;
+}
+
+.table-data {
+  position: relative;
+  border: 1px solid #dde;
+  border-collapse: collapse;
+}
+
+.table-data tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(100px, 250px));
+  overflow-x: auto;
+}
+
+.table-data thead th {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.table-data thead tr {
+  background-color: #dde;
+}
+
+.table-data tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+.table-data tbody tr:nth-child(even) {
+  background-color: #dde;
+}
+
+.table-data tbody tr:nth-child(even):hover,
+.table-data tbody tr:nth-child(odd):hover {
+  background-color: #eef;
+}
+
+.form-div {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 88px;
+  margin-bottom: 25px;
+}
+
+input[type="name"] {
+  padding: 20px;
+  outline: none;
+  border: 0px inset;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 1px 0px 2px 1px #ddd;
+  border-radius: 8px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eef;
+}
+
+.btn {
+  margin: 5px;
+  padding: 20px;
+  outline: none;
+  border: 0px;
+  background-color: #dde;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #eef;
+}
+
+#report-table {
+  display: none;
+}
+
+#current_date {
+	font-size: 200%
+}
+
