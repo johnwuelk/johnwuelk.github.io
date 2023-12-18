@@ -1,13 +1,13 @@
 0 12 */2 * * pkg update -y && pkg upgrade -y
 
-*/15 * * * * ~/bin/bat.sh
+*/10 * * * * ~/bin/bat.sh
 
 #0 7 * * * ~/bin/sayTime.sh 50
 #0 10 * * * ~/bin/sayTime.sh 50
 
 #Fails: 41 2 8 12 * termux-microphone-record -f ~/rec_$(date +%d%m%Y_%H%M).m4a -l 43200
 
-#0 6 * * * ~/rec.sh start 64800
+30 7 * * * ~/rec.sh start 64800
 */10 * * * * ~/sync.sh  #check for Crontab changes
 */10 * * * * termux-microphone-record -i >> ~/rec.log
 */10 * * * * ls -Slahr ~/ > ~/recListDir.txt
