@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Sheet</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+
+        <button id="downloadLink" class="btn" type="submit">Export All</button>
+	<script>
+		function downloadInnerHtml(filename, elId, mimeType) {
+		    var elHtml = document.getElementById(elId).innerHTML;
+		    var link = document.createElement('a');
+		    mimeType = mimeType || 'text/plain';
+
+		    link.setAttribute('download', filename);
+		    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+		    link.click();
+		}
+		var fileName =  'currentReport.html'; // You can use the .txt extension if you want
+		$('#downloadLink').click(function(){
+		    document.getElementById("report").click();
+		    downloadInnerHtml(fileName, 'main','text/html');
+		});
+		// click button every hour (in ms)
+		setInterval(function(){
+   			$("#downloadLink").click();
+		},3600000);
+	</script>
+
+  <body>
+    <main id="main">
+	    <!-- <h2>Attendance List of The Reader's Playhouse<br><br></h2> -->
+      <div class="form-div">
+	   <select id="select" onchange="fillInput()">
+		<option value=""></option>
+		<option value="Adrian Morris">Adrian Morris</option>
+		<option value="Ana Adams">Ana Adams</option>
+		<option value="Antonius">Antonius</option>
+		<option value="Autumn Capron">Autumn Capron</option>
+		<option value="Ayah">Ayah</option>
+		<option value="Bria">Bria</option>
+		<option value="Cade">Cade</option>
+		<option value="Caileigh Lightbourne">Caileigh Lightbourne</option>
+		<option value="Caylee Gardener">Caylee Gardener</option>
+		<option value="Chance">Chance</option>
+		<option value="Chaysen">Chayson</option>
+		<option value="Ember Dickenson">Ember Dickenson</option>
+		<option value="Jayce Smith">Jayce Smith</option>
+		<option value="Khalil">Khalil</option>
+		<option value="Nolan Lightbourne">Nolan Lightbourne</option>
+		<option value="Nova">Nova</option>
+		<option value="Phenel William Valcin">Phenel William Valcin</option>
+		<option value="Roman">Roman</option>
+		<option value="Ronalie">Ronalie</option>
+		<option value="Ronaya"><Ronaya/option>
+		<option value="Synkero">Synkero</option>
+	</select>
+        <input type="name" id="name" placeholder="Select or Type a Child" onfocus="clear()"/>
+	<br>
+	<div class="buttons">
+		<button id="enter" class="btn">Enter</button>
+		<button id="leave" class="btn">Leave</button>
+		<button id="report" class="btn" style="margin-left:30%;">Generate Report</button>
+	</div>
+      </div>
+
+      <div class="table-container">
+		<div id="current_date">
+		    <script>
+			const options = { weekday: 'long', year: 'numeric', day: 'numeric', month: 'long' };
+			document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('en-GB', options);
+		    </script>
+		</div>
+        <table class="table-data">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Joined</th>
+              <th>Left</th>
+            </tr>
+          </thead>
+
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="table-container" id="report-table">
+	<br><br>
+        <h2>Attendance Report</h2>
+        <table class="table-data">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Joined</th>
+              <th>Left</th>
+              <th>Duration (hours)</th>
+            </tr>
+          </thead>
+
+          <tbody id="table-report-body"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
 
