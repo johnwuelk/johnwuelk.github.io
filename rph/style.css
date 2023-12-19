@@ -82,17 +82,24 @@ h1{
 
 .form-div {
   width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-flow: row wrap;
+  padding-left: 25%;
   justify-content: center;
   align-items: center;
   height: 88px;
   margin-bottom: 25px;
 }
+.form-div #select {
+  width: 4%;
+  padding:20px;
+  background: lightgreen;
+  border:darkblue;
+}
+.buttons {
+  padding-left: 5%;
+}
 
 input[type="name"] {
-  padding: 20px;
+  padding: 20px 20px 20px 1px;
   outline: none;
   border: 0px inset;
   border-bottom: 1px solid #ddd;

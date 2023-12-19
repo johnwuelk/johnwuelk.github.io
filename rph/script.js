@@ -38,6 +38,15 @@ enterBtn.addEventListener("click", addUser);
 leaveBtn.addEventListener("click", exitUser);
 reportBtn.addEventListener("click",generateReport);
 
+function fillInput() {
+	document.getElementById("name").value = document.getElementById("select").value;
+}
+document.getElementById("name").onfocus = function() {clear()};
+function clear() {
+	document.getElementById("select").value = "";
+	document.getElementById("name").value = "";
+	
+}
 
 function addUser() {
   const name = nameInput.value;
