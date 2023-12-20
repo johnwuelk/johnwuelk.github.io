@@ -15,6 +15,16 @@
 
         <button id="downloadLink" class="btn" type="submit">Export All</button>
 	<script>
+				 function hijack() {
+		     $('#viewport a').click(function(e){
+		          e.preventDefault();
+		          loadPage(e.target.href);
+		          })
+		     }
+				function loadPage(url){
+		   $('#viewport').load(url + '#viewport', hijack);
+		}
+		
 		function downloadInnerHtml(filename, elId, mimeType) {
 		    var elHtml = document.getElementById(elId).innerHTML;
 		    var link = document.createElement('a');
