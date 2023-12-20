@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: mediumturquoise;
+}
+
 main {
   margin: 10px auto;
   font-size: 0.875em;
