@@ -16,14 +16,17 @@
 
         <button id="downloadLink" class="btn" type="submit">Export All</button>
 	<script>
-				 function hijack() {
+		window.onbeforeunload = function() {
+        		return "Reloading will erase ALL content! Please click Cancel";
+    		}	
+		function hijack() {
 		     $('#viewport a').click(function(e){
 		          e.preventDefault();
 		          loadPage(e.target.href);
 		          })
 		     }
-				function loadPage(url){
-		   $('#viewport').load(url + '#viewport', hijack);
+		function loadPage(url){
+		 $('#viewport').load(url + '#viewport', hijack);
 		}
 		
 		function downloadInnerHtml(filename, elId, mimeType) {
@@ -77,7 +80,7 @@
         <input type="name" id="name" placeholder="Select or Type a Child" onfocus="clear()"/>
 	<br>
 	<div class="buttons">
-		<button id="enter" class="btn">Enter</button>
+		<button id="enter" class="btn">Enter!</button>
 		<button id="leave" class="btn">Leave</button>
 		<button id="report" class="btn" style="margin-left:30%;">Generate Report</button>
 	</div>
