@@ -74,6 +74,7 @@ function addUser() {
   });
   // update the dom
   updateDom();
+  clear();
 }
 
 function exitUser() {
@@ -97,6 +98,7 @@ function exitUser() {
 
   // update the dom
   updateDom();
+  clear();
 }
 
 function updateDom() {
