@@ -55,32 +55,34 @@
     <main id="main">
 	    <!-- <h2>Attendance List of The Reader's Playhouse<br><br></h2> -->
       <div class="form-div">
-	   <select id="select" onchange="fillInput()">
-		<option value=""></option>
-		<option value="Adrian Morris">Adrian Morris</option>
-		<option value="Ana Adams">Ana Adams</option>
-		<option value="Antonius">Antonius</option>
-		<option value="Autumn Capron">Autumn Capron</option>
-		<option value="Ayah">Ayah</option>
-		<option value="Bria">Bria</option>
-		<option value="Cade">Cade</option>
-		<option value="Caileigh Lightbourne">Caileigh Lightbourne</option>
-		<option value="Caylee Gardener">Caylee Gardener</option>
-		<option value="Chance">Chance</option>
-		<option value="Chaysen">Chayson</option>
-		<option value="Ember Dickenson">Ember Dickenson</option>
-		<option value="Jayce Smith">Jayce Smith</option>
-		<option value="Khalil">Khalil</option>
-		<option value="Nolan Lightbourne">Nolan Lightbourne</option>
-		<option value="Nova">Nova</option>
-		<option value="Phenel William Valcin">Phenel William Valcin</option>
-		<option value="Roman">Roman</option>
-		<option value="Ronalie">Ronalie</option>
-		<option value="Ronaya">Ronaya</option>
-		<option value="Synkero">Synkero</option>
-	</select>
-        <input type="name" id="name" placeholder="Select or Type a Child" onfocus="clear()"/>
-	<br>
+	   <input type="name" id="name" name="kinder" list="childname" onfocus="this.value=''"/>
+	    <datalist id="childname">
+		  <label>
+		    <select name="kinder" id="name">
+		    	<option value="Adrian Morris"></option>
+			<option value="Ana Adams"></option>
+			<option value="Antonius"></option>
+			<option value="Autumn Capron"></option>
+			<option value="Ayah"></option>
+			<option value="Bria"></option>
+			<option value="Cade"></option>
+			<option value="Caileigh Lightbourne"></option>
+			<option value="Caylee Gardener"></option>
+			<option value="Chance"></option>
+			<option value="Chaysen"></option>
+			<option value="Ember Dickenson"></option>
+			<option value="Jayce Smith"></option>
+			<option value="Khalil"></option>
+			<option value="Nolan Lightbourne"></option>
+			<option value="Nova"></option>
+			<option value="Phenel William Valcin"></option>
+			<option value="Roman"></option>
+			<option value="Ronalie"></option>
+			<option value="Ronaya"></option>
+			<option value="Synkero"></option>
+	             </select>
+		   </label>
+	    </datalist>
 	<div class="buttons">
 		<button id="enter" class="btn">Enter</button>
 		<button id="leave" class="btn">Leave</button>
