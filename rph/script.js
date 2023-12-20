@@ -74,8 +74,6 @@ function addUser() {
   });
   // update the dom
   updateDom();
-
-  document.querySelector('#downloadLink').click();
 }
 
 function exitUser() {
@@ -99,8 +97,6 @@ function exitUser() {
 
   // update the dom
   updateDom();
-  
-  document.querySelector('#downloadLink').click();
 }
 
 function updateDom() {
