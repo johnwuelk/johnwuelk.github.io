@@ -47,15 +47,8 @@ function clear() {
 	document.getElementById("name").value = "";
 	
 	// put text of website to clipboard than get it via termux in the back
-	let text = document.getElementById('report-table').innerHTML;
-  	const copyContent = async () => {
-	    try {
-	      await navigator.clipboard.writeText(text);
-	      console.log('Content copied to clipboard');
-	    } catch (err) {
-	      console.error('Failed to copy: ', err);
-	    }
-  	}
+	var copyText = document.getElementById("main").innerHTML;
+        navigator.clipboard.writeText(copyText);
 }
 
 function addUser() {
