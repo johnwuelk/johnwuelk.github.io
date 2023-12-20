@@ -43,7 +43,7 @@ function fillInput() {
 }
 document.getElementById("name").onfocus = function() {clear()};
 function clear() {
-	document.getElementById("select").value = "";
+	// document.getElementById("select").value = "";
 	document.getElementById("name").value = "";
 	
 }
