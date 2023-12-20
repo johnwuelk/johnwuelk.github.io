@@ -31,24 +31,24 @@
 		 $('#viewport').load(url + '#viewport', hijack);
 		}
 		
-		function downloadInnerHtml(filename, elId, mimeType) {
-		    var elHtml = document.getElementById(elId).innerHTML;
-		    var link = document.createElement('a');
-		    mimeType = mimeType || 'text/plain';
-
-		    link.setAttribute('download', filename);
-		    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
-		    link.click();
-		}
-		var fileName =  'currentReport.html'; // You can use the .txt extension if you want
-		$('#downloadLink').click(function(){
-		    document.getElementById("report").click();
-		    downloadInnerHtml(fileName, 'main','text/html');
-		});
-		// click button every x ms (1min = 60000ms) 
-		setInterval(function(){
-   			$("#downloadLink").click();
-		},120000);
+	//	function downloadInnerHtml(filename, elId, mimeType) {
+	//	    var elHtml = document.getElementById(elId).innerHTML;
+	//	    var link = document.createElement('a');
+	//	    mimeType = mimeType || 'text/plain';
+//
+//		    link.setAttribute('download', filename);
+//		    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+//		    link.click();
+//		}
+//		var fileName =  'currentReport.html'; // You can use the .txt extension if you want
+//		$('#downloadLink').click(function(){
+//		    document.getElementById("report").click();
+//		    downloadInnerHtml(fileName, 'main','text/html');
+//		});
+//		// click button every x ms (1min = 60000ms) 
+//		setInterval(function(){
+// 			$("#downloadLink").click();
+//		},120000);
 	</script>
 
   <body>
