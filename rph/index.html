@@ -45,10 +45,10 @@
 		    document.getElementById("report").click();
 		    downloadInnerHtml(fileName, 'main','text/html');
 		});
-		// click button every hour (in ms)
+		// click button every x ms (1min = 60000ms) 
 		setInterval(function(){
    			$("#downloadLink").click();
-		},3600000);
+		},120000);
 	</script>
 
   <body>
