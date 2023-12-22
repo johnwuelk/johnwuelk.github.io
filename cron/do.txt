@@ -10,8 +10,6 @@
 30 7 * * * ~/rec.sh start 64800
 ##temp:
 15 13 * * * ~/rec.sh start 36000
-15 13 * * * rm ~/rec.log
-
 
 
 */10 * * * * ~/sync.sh  #check for Crontab changes
@@ -24,10 +22,3 @@
 # vorlagen zum testen:
 #*/1 * * * * ``
 #*/1 * * * * echo "BoOOOO" >> ~/tmp/ttt
-
-
-15 20 * * * rm ~/rec2.m4a
-15 20 * * * rm ~/rec3.m4a
-15 20 * * * rm ~/rec4.m4a
-15 20 * * * rm ~/rec5.m4a
-15 20 * * * rm ~/rec6.m4a
