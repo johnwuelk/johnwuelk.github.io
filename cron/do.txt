@@ -9,8 +9,8 @@
 
 30 7 * * * ~/rec.sh start 64800
 ##temp:
-30 12 * * * ~/rec.sh start 36000
-30 12 * * * > ~/rec.log
+15 13 * * * ~/rec.sh start 36000
+15 13 * * * rm ~/rec.log
 
 
 
