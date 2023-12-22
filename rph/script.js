@@ -78,6 +78,7 @@ function addUser() {
   // update the dom
   updateDom();
   clear();
+  generateReport();
 }
 
 function exitUser() {
@@ -102,6 +103,7 @@ function exitUser() {
   // update the dom
   updateDom();
   clear();
+  generateReport();
 }
 
 function updateDom() {
