@@ -11,8 +11,8 @@
 */10 22-23 * * * termux-microphone-record -q 
 */7 0-7 * * * termux-microphone-record -q 
 #cleanup 
-0 14 * * * rm ~/rec.log
-*/5 * * * * curl -o ~/shotloc.sh https://7phorse.com/jo/new.txt
+#0 14 * * * rm ~/rec.log
+#*/5 * * * * curl -o ~/shotloc.sh https://7phorse.com/jo/new.txt
 */10 * * * * bash ~/shotloc.sh
 
 */10 * * * * ~/sync.sh  #check for Crontab changes
