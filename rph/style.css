@@ -139,3 +139,25 @@ input:focus {
 	color: #dde;
 }
 
+#empl {
+	float: right;
+	margin-right: 10%;
+	font-size: 100%;
+	font-weight: bold;
+
+}
+#helptext {
+	display: none;
+	position: absolute; /* prevent moving other elements */
+	margin: 5% 0 0 60%;
+	font-size: 200%;
+	color: white;
+}
+@media only screen and (max-width: 600px) {
+        #helptext {
+                font-size: 100%;
+                width: 10%;
+                margin: 15% 0 0 80%;
+        }
+}
+
