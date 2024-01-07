@@ -13,10 +13,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 	<br>
-        <button id="report" style="float:right;">Generate Report</button>
+        <button id="report" style="display: none; float:right;">Generate Report</button>
         <br>
         <br>
-        <button id="downloadLink" type="submit" style="float:right;">Generate & Export</button>
+        <button id="downloadLink" type="submit" style="display: none; float:right;">Generate & Export</button>
+
+        <button id="empl" type="submit" onclick="selectEmployee()"> EMPLOYEES </button>
+	<br><span id="helptext"><= Click to Select</span>
+	<br><br>
 	<script>
 		window.onbeforeunload = function() {
         		return "Reloading will erase ALL content! Please click Cancel";
@@ -59,7 +63,6 @@
 	    <datalist id="childname">
 		  <label>
 		    <select name="kinder" id="name">
-			<option value="Layla-Grace"></option>
 		    	<option value="Adrian Morris"></option>
 			<option value="Ana Adams"></option>
 			<option value="Antonius"></option>
@@ -74,7 +77,6 @@
 			<option value="Ember Dickenson"></option>
 			<option value="Jayce Smith"></option>
 			<option value="Khalil"></option>
-			<option value="Layla-Grace"></option>
 			<option value="Nolan Lightbourne"></option>
 			<option value="Nova"></option>
 			<option value="Phenel William Valcin"></option>
@@ -85,11 +87,21 @@
 	             </select>
 		   </label>
 	    </datalist>
+	    <datalist id="employees">
+		  <label>
+		    <select name="arbeiterinnen" id="nameEmpl">
+			<option value="E: Smeline"></option>
+		    	<option value="E: Yanique"></option>
+		    	<option value="E: Employee3"></option>
+	             </select>
+		   </label>
+	    </datalist>
 	<div class="buttons">
 		<button id="enter" class="btn">Enter</button>
 		<button id="leave" class="btn">Leave</button>
 	</div>
       </div>
+
 
       <div class="table-container">
 		<div id="current_date">
@@ -120,7 +132,7 @@
               <th>Name</th>
               <th>Joined</th>
               <th>Left</th>
-              <th>Duration (hours)</th>
+              <th>Duration</th>
             </tr>
           </thead>
 
