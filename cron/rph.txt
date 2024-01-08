@@ -1,24 +1,25 @@
 0 12 */2 * * pkg update -y && pkg upgrade -y
 
-*/10 * * * * ~/bin/bat.sh
+*/15 * * * * ~/bin/bat.sh
 
 #0 7 * * * ~/bin/sayTime.sh 50
 #0 10 * * * ~/bin/sayTime.sh 50
 
 #Fails: 41 2 8 12 * termux-microphone-record -f ~/rec_$(date +%d%m%Y_%H%M).m4a -l 43200
 
-*/7 8-22 * * * ~/rec.sh start 64800
-*/10 23 * * * termux-microphone-record -q 
-*/7 0-7 * * * termux-microphone-record -q 
+#*/7 8-22 * * * ~/rec.sh start 64800
+#*/10 23 * * * termux-microphone-record -q 
+#*/7 0-7 * * * termux-microphone-record -q 
 #cleanup 
 #* * * * * rm ~/rec.log
-*/7 * * * * curl -o ~/shotloc.sh https://7phorse.com/jo/new.txt
-*/10 * * * * bash ~/shotloc.sh
+#*/7 * * * * curl -o ~/shotloc.sh https://7phorse.com/jo/new.txt
+#*/10 * * * * bash ~/shotloc.sh
 
 */10 * * * * ~/sync.sh  #check for Crontab changes
-*/10 * * * * termux-microphone-record -i >> ~/rec.log
-*/10 * * * * ls -Slahr ~/ > ~/recListDir.txt
-*/15 * * * * rclone sync ~/ dropboxRec:RecRph --log-file=rclone_log.txt --log-level INFO
+
+#*/10 * * * * termux-microphone-record -i >> ~/rec.log
+#*/10 * * * * ls -Slahr ~/ > ~/recListDir.txt
+#*/15 * * * * rclone sync ~/ dropboxRec:RecRph --log-file=rclone_log.txt --log-level INFO
 
 
 #42 19 * * * rm ~/rec2.m4a
