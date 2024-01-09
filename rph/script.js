@@ -46,7 +46,7 @@ function clear() {
 	document.getElementById('name').setAttribute('list', 'childname')
 
 	document.getElementById("name").value = "";
-	document.getElementById("helptext").style.display = "none";
+	//document.getElementById("helptext").style.display = "none";
 	
 	// put text of website to clipboard than get it via termux in the back
 	var copyText = document.getElementById("main").innerHTML;
