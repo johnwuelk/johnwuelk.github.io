@@ -94,9 +94,8 @@ function addUser() {
   });
   // update the dom
   updateDom();
-  clear();
   generateReport();
-
+  clear();
 
 	// SAVE everything to file, retrieve items from dictionary and/or array
 	let date = new Date().toLocaleDateString('en-GB', options);
@@ -138,8 +137,8 @@ function exitUser() {
 
   // update the dom
   updateDom();
-  clear();
   generateReport();
+  clear();
 
   
 	// SAVE everything to file, retrieve items from dictionary and/or array
