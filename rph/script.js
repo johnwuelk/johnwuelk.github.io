@@ -97,23 +97,6 @@ function addUser() {
   generateReport();
   clear();
 
-	// SAVE everything to file, retrieve items from dictionary and/or array
-	let date = new Date().toLocaleDateString('en-GB', options);
-	let fileContent = date;
-	fileContent += "\nName\tJoined\tLeft\tDuration\n\n";
-	for (var child in meetingRecords) {
-	    let eintritt = meetingRecords[child][0].joined;
-	    let austritt = meetingRecords[child][0].left;
-	    let dauer = claculateDuration(eintritt, austritt)
-	    fileContent += child + '\t' + eintritt + '\t' + austritt + '\t' + dauer + '\n';
-	}
-	fileContent += "\n\n\"NaN\" means that the person hasn't clocked out.";
-	var bb = new Blob([fileContent ], { type: 'text/plain' });
-	var a = document.createElement('a');
-	let fileName = date;
-	a.download = fileName;
-	a.href = window.URL.createObjectURL(bb);
-	a.click();
 }
 
 function exitUser() {
@@ -140,24 +123,6 @@ function exitUser() {
   generateReport();
   clear();
 
-  
-	// SAVE everything to file, retrieve items from dictionary and/or array
-	let date = new Date().toLocaleDateString('en-GB', options);
-	let fileContent = date;
-	fileContent += "\nName\tJoined\tLeft\tDuration\n\n";
-	for (var child in meetingRecords) {
-	    let eintritt = meetingRecords[child][0].joined;
-	    let austritt = meetingRecords[child][0].left;
-	    let dauer = claculateDuration(eintritt, austritt)
-	    fileContent += child + '\t' + eintritt + '\t' + austritt + '\t' + dauer + '\n';
-	}
-	fileContent += "\n\n\"NaN\" means that the person hasn't clocked out.";
-	var bb = new Blob([fileContent ], { type: 'text/plain' });
-	var a = document.createElement('a');
-	let fileName = date;
-	a.download = fileName;
-	a.href = window.URL.createObjectURL(bb);
-	a.click();
 }
 
 function updateDom() {
