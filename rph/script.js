@@ -113,25 +113,6 @@ function addUser() {
   generateReport();
   clear();
   save();
-	
-	// SAVE everything to file, retrieve items from dictionary and/or array
-	let date = new Date().toLocaleDateString('en-GB', options);
-	let fileContent = date;
-	fileContent += "<style>table tr td { border: 1px solid;  } table { border-collapse: collapse; }</style><br><table><tr><td> Name </td><td> Joined </td><td> Left </td><td> Duration (h) </td></tr>";
-	for (var child in meetingRecords) {
-	    let eintritt = meetingRecords[child][0].joined;
-	    let austritt = meetingRecords[child][0].left;
-	    let dauer = claculateDuration(eintritt, austritt)
-	    fileContent += '<tr><td>' + child  +'</td><td>' + eintritt + '</td><td>' + austritt + '</d><td>' + dauer + '</td></tr>';
-	}
-	fileContent += "</table><br><br>NaN means that the person hasn't clocked out.";
-        var bb = new Blob([fileContent ], { type: 'text/html' }); //was text/plain
-
-	var a = document.createElement('a');
-	let fileName = date;
-	a.download = fileName;
-	a.href = window.URL.createObjectURL(bb);
-	a.click();
 }
 
 function exitUser() {
@@ -160,7 +141,7 @@ function exitUser() {
   save();
 
 	// SAVE everything to file, retrieve items from dictionary and/or array
-	let date = new Date().toLocaleDateString('en-GB', options);
+	/* let date = new Date().toLocaleDateString('en-GB', options);
 	let fileContent = date;
 	fileContent += "<style>table tr td { border: 1px solid;  } table { border-collapse: collapse; }</style><br><table><tr><td> Name </td><td> Joined </td><td> Left </td><td> Duration (h) </td></tr>";
 	for (var child in meetingRecords) {
@@ -176,7 +157,7 @@ function exitUser() {
 	let fileName = date;
 	a.download = fileName;
 	a.href = window.URL.createObjectURL(bb);
-	a.click();
+	a.click(); */
 }
 
 function updateDom() {
