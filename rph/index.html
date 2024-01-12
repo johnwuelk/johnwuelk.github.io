@@ -2,11 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!--
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
-    -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,17 +13,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 	<br>
-        <button id="report" style="float:right;">Generate Report</button>
+        <button id="report" style="display:none;float:right;">Generate Report</button>
         <br>
         <br>
-        <button id="downloadLink" type="submit" style="float:right;">Generate & Export</button>
+        <button id="downloadLink" type="submit" style="display:none;float:right;">Generate & Export</button>
+        <br>
+        <br>
+	<label style="float:right;" for="avatar">Load backup file:</label>
+	<br>
+	<input style="float:right;" type="file" id="files" name="files[]" multiple />
 
-	<!--
-        <button id="empl" type="submit" onclick="selectEmployee()"> EMPLOYEES </button>
-	<br><span id="helptext"><= Click to Select</span>
-	<br><br>
-	-->
-	
+	<button id="empl" type="submit" onclick="selectEmployee()"> EMPLOYEES </button>
+        <br><span id="helptext"><= Click to Select</span>
+        <br><br>
 	<script>
 		window.onbeforeunload = function() {
         		return "Reloading will erase ALL content! Please click Cancel";
@@ -97,20 +94,20 @@
 		   </label>
 	    </datalist>
 	    <datalist id="employees">
-		  <label>
-		    <select name="arbeiterinnen" id="nameEmpl">
-			<option value="E: Smeline"></option>
-		    	<option value="E: Yanique"></option>
-		    	<option value="E: Employee3"></option>
-	             </select>
-		   </label>
-	    </datalist>
+                  <label>
+                    <select name="arbeiterinnen" id="nameEmpl">
+                        <option value="E: Smeline"></option>
+                        <option value="E: Yanique"></option>
+                        <option value="E: Employee3"></option>
+                        <option value="E: Employee4"></option>
+                     </select>
+                   </label>
+            </datalist>
 	<div class="buttons">
 		<button id="enter" class="btn">Enter</button>
 		<button id="leave" class="btn">Leave</button>
 	</div>
       </div>
-
 
       <div class="table-container">
 		<div id="current_date">
@@ -153,4 +150,3 @@
     <script src="./script.js"></script>
   </body>
 </html>
-
