@@ -42,30 +42,46 @@ function fillInput() {
 	document.getElementById("name").value = document.getElementById("select").value;
 	document.getElementById("nameEmpl").value = document.getElementById("select").value;
 }
-function clear() {
-	document.getElementById('name').setAttribute('list', 'childname')
 
-	document.getElementById("name").value = "";
-	//document.getElementById("helptext").style.display = "none";
+function clear() {
+        document.getElementById('name').setAttribute('list', 'childname') 
+        document.getElementById("name").value = ""; 
+        document.getElementById("helptext").style.display = "none"; 
 	
 	// put text of website to clipboard than get it via termux in the back
 	var copyText = document.getElementById("main").innerHTML;
         navigator.clipboard.writeText(copyText);
 }
+
 function selectEmployee() {
-	document.getElementById("helptext").style.display = "block";
-	// change datalist to employees datalist
-	document.getElementById('name').setAttribute('list', 'employees');
-	// IDLE: Go back to childrens datalist after idle time reached
-	var time;
-	// DOM Events
-	document.onmousemove = resetTimer;
-	document.onkeydown = resetTimer;
-    	function resetTimer() {
-        	clearTimeout(time);
-        	time = setTimeout(clear, 5000)
-		// 1000 milliseconds = 1 second
+        document.getElementById("helptext").style.display = "block";
+        // change datalist to employees datalist
+        document.getElementById('name').setAttribute('list', 'employees');
+        // IDLE: Go back to childrens datalist after idle time reached
+        var time;
+        // DOM Events
+        document.onmousemove = resetTimer;
+        document.onkeydown = resetTimer;
+        function resetTimer() {
+                clearTimeout(time);
+                time = setTimeout(clear, 5000)
+                // 1000 milliseconds = 1 second
     }
+}
+
+function save() {
+  //save to file on server
+  let str = ""
+  Object.keys(meetingRecords).forEach(function(key) {
+    str = key;
+    str += "\t" + meetingRecords[key][0].joined;
+    str += "\t" + meetingRecords[key][0].left + "\n";    
+  });
+  $.ajax({
+	  type: 'POST',
+	  url: "./save.php",
+	  data: { text: str } 
+        });
 }
 
 function addUser() {
@@ -96,7 +112,26 @@ function addUser() {
   updateDom();
   generateReport();
   clear();
+  save();
+	
+	// SAVE everything to file, retrieve items from dictionary and/or array
+	let date = new Date().toLocaleDateString('en-GB', options);
+	let fileContent = date;
+	fileContent += "<style>table tr td { border: 1px solid;  } table { border-collapse: collapse; }</style><br><table><tr><td> Name </td><td> Joined </td><td> Left </td><td> Duration (h) </td></tr>";
+	for (var child in meetingRecords) {
+	    let eintritt = meetingRecords[child][0].joined;
+	    let austritt = meetingRecords[child][0].left;
+	    let dauer = claculateDuration(eintritt, austritt)
+	    fileContent += '<tr><td>' + child  +'</td><td>' + eintritt + '</td><td>' + austritt + '</d><td>' + dauer + '</td></tr>';
+	}
+	fileContent += "</table><br><br>NaN means that the person hasn't clocked out.";
+        var bb = new Blob([fileContent ], { type: 'text/html' }); //was text/plain
 
+	var a = document.createElement('a');
+	let fileName = date;
+	a.download = fileName;
+	a.href = window.URL.createObjectURL(bb);
+	a.click();
 }
 
 function exitUser() {
@@ -122,7 +157,26 @@ function exitUser() {
   updateDom();
   generateReport();
   clear();
+  save();
 
+	// SAVE everything to file, retrieve items from dictionary and/or array
+	let date = new Date().toLocaleDateString('en-GB', options);
+	let fileContent = date;
+	fileContent += "<style>table tr td { border: 1px solid;  } table { border-collapse: collapse; }</style><br><table><tr><td> Name </td><td> Joined </td><td> Left </td><td> Duration (h) </td></tr>";
+	for (var child in meetingRecords) {
+	    let eintritt = meetingRecords[child][0].joined;
+	    let austritt = meetingRecords[child][0].left;
+	    let dauer = claculateDuration(eintritt, austritt)
+	    fileContent += '<tr><td>' + child  +'</td><td>' + eintritt + '</td><td>' + austritt + '</d><td>' + dauer + '</td></tr>';
+	}
+	fileContent += "</table><br><br>NaN means that the person hasn't clocked out.";
+        var bb = new Blob([fileContent ], { type: 'text/html' }); //was text/plain
+
+	var a = document.createElement('a');
+	let fileName = date;
+	a.download = fileName;
+	a.href = window.URL.createObjectURL(bb);
+	a.click();
 }
 
 function updateDom() {
@@ -199,5 +253,44 @@ function generateReport(){
   }
 
   reportTableTbody.appendChild(frag);
-
 }
+
+
+
+function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+        // Loop through the FileList
+        for (var i = 0, f; f = files[i]; i++) {
+		var reader = new FileReader();
+		// Closure to capture the file information.
+		reader.onload = (function(theFile) {
+		    return function(e) {
+			// Handle the contents of the file
+			//First split by new line then split by tab.
+			const str = e.target.result
+			const parsedString = str.split('\n').map((line) => line.split('\t'))
+			let i = 0;
+			for (const element of parsedString) {
+				let n = parsedString[i][0]
+				let j = parsedString[i][1]
+				let l = parsedString[i][2]
+				meetingRecords[n] = []
+				if (l == "-") { l = ""; }
+				meetingRecords[n][0] = {joined: j, left: l}
+				updateDom();
+				//alert(parsedString[i][3]);
+			i++
+			}
+			//alert(parsedString[0][0]);
+			//alert(e.target.result);
+		    };
+		})(f);
+		// Read in the file
+		//reader.readAsDataText(f,UTF-8);
+		//reader.readAsDataURL(f);
+		reader.readAsText(f);
+	}
+}
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
