@@ -12,20 +12,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-	<br>
         <button id="report" style="display:none;float:right;">Generate Report</button>
-        <br>
-        <br>
         <button id="downloadLink" type="submit" style="display:none;float:right;">Generate & Export</button>
-        <br>
-        <br>
 	<label style="float:right;" for="avatar">Load backup file:</label>
-	<br>
 	<input style="float:right;" type="file" id="files" name="files[]" multiple />
-
 	<button id="empl" type="submit" onclick="selectEmployee()"> EMPLOYEES </button>
-        <br><span id="helptext"><= Click to Select</span>
-        <br><br>
+        <span id="helptext"><= Click to Select</span>
+        <br>
 	<script>
 		window.onbeforeunload = function() {
         		return "Reloading will erase ALL content! Please click Cancel";
