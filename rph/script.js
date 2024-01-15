@@ -250,6 +250,7 @@ function handleFileSelect(evt) {
 			//First split by new line then split by tab.
 			const str = e.target.result
 			const parsedString = str.split('\n').map((line) => line.split('\t'))
+			parsedString.splice(-1);    
 			let i = 0;
 			for (const element of parsedString) {
 				let n = parsedString[i][0]
