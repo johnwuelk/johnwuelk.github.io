@@ -257,6 +257,7 @@ function handleFileSelect(evt) {
 				let l = parsedString[i][2]
 				meetingRecords[n] = []
 				if (l == "-") { l = ""; }
+				if (l == "undefined") { l = ""; }
 				meetingRecords[n][0] = {joined: j, left: l}
 				updateDom();
 				//alert(parsedString[i][3]);
