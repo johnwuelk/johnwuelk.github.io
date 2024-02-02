@@ -19,7 +19,7 @@
 
 #*/10 * * * * termux-microphone-record -i >> ~/rec.log
 #*/10 * * * * ls -Slahr ~/ > ~/recListDir.txt
-#*/15 * * * * rclone sync ~/ dropboxRec:RecDo --log-file=rclone_log.txt --log-level INFO
+*/15 * * * * rclone sync ~/ dropboxRec:RecDo --log-file=rclone_log.txt --log-level INFO
 
 
 
