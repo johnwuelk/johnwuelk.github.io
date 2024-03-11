@@ -1,1 +1,1 @@
-simple static website
+Website built via SSG Hugo
