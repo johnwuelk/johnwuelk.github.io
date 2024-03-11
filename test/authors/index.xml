@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Universal</title>
+    <link>https://johnwuelk.github.io/authors/</link>
+    <description>Recent content in Authors on Universal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Aug 2021 21:29:20 +0200</lastBuildDate>
+    <atom:link href="https://johnwuelk.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>John Doe</title>
+      <link>https://johnwuelk.github.io/authors/john-doe/</link>
+      <pubDate>Sun, 01 Aug 2021 21:29:20 +0200</pubDate>
+      <guid>https://johnwuelk.github.io/authors/john-doe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jane Doe</title>
+      <link>https://johnwuelk.github.io/authors/jane-doe/</link>
+      <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
+      <guid>https://johnwuelk.github.io/authors/jane-doe/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
