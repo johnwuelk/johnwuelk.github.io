@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Universal</title>
-    <link>https://johnwuelk.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Universal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Mar 2024 21:29:20 +0200</lastBuildDate>
-    <atom:link href="https://johnwuelk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advertisement</title>
-      <link>https://johnwuelk.github.io/categories/advertisement/</link>
+      <link>http://localhost:1313/categories/advertisement/</link>
       <pubDate>Tue, 12 Mar 2024 21:29:20 +0200</pubDate>
-      <guid>https://johnwuelk.github.io/categories/advertisement/</guid>
+      <guid>http://localhost:1313/categories/advertisement/</guid>
       <description></description>
     </item>
     <item>
       <title>Features</title>
-      <link>https://johnwuelk.github.io/categories/features/</link>
+      <link>http://localhost:1313/categories/features/</link>
       <pubDate>Mon, 11 Mar 2024 21:29:20 +0200</pubDate>
-      <guid>https://johnwuelk.github.io/categories/features/</guid>
+      <guid>http://localhost:1313/categories/features/</guid>
       <description></description>
     </item>
   </channel>
