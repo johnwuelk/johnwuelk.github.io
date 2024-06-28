@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "name": "first Design stage",
+        "image": "images/recentworksA_1.jpg",
+        "url": "#",
+        "items": [
+        ]
+    },
+    {
+        "id": 1,
+        "name": "of a 3-Bedroom model",
+        "image": "images/recentworksA_2.jpg",
+        "url": "#",
+        "items": [
+        ]
+    },
+    {
+        "id": 2,
+        "name": "From carefully tailored and tested concepts",
+        "image": "images/recentworksA_3.jpg",
+        "url": "#",
+        "items": [
+        ]
+    },
+    {
+        "id": 3,
+        "name": "to Reality!",
+        "image": "images/recentworksA_4.jpg",
+        "url": "#",
+        "items": [
+        ]
+    }
+]
