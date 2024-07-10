@@ -4,7 +4,7 @@
     <title>Universal</title>
     <link>https://johnwuelk.github.io/</link>
     <description>Recent content on Universal</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Mar 2024 21:29:20 +0200</lastBuildDate>
     <atom:link href="https://johnwuelk.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,7 @@
       <link>https://johnwuelk.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://johnwuelk.github.io/contact/</guid>
-      <description>Would you like to meet in person and discuss your needs? Or are you just curious about something?&#xA;Please feel free to contact us.</description>
+      <description>Would you like to meet in person and discuss your needs? Please feel free to contact us.</description>
     </item>
     <item>
       <title>Packages</title>
