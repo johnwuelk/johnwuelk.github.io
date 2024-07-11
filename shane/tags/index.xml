@@ -4,35 +4,30 @@
     <title>Tags on Paradigm</title>
     <link>https://johnwuelk.github.io/shane/tags/</link>
     <description>Recent content in Tags on Paradigm</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://johnwuelk.github.io/shane/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://johnwuelk.github.io/shane/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>markdown</title>
-      <link>https://johnwuelk.github.io/shane/tags/markdown/</link>
-      <pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnwuelk.github.io/shane/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>text</title>
-      <link>https://johnwuelk.github.io/shane/tags/text/</link>
-      <pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://johnwuelk.github.io/shane/tags/text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>index</title>
+      <title>Index</title>
       <link>https://johnwuelk.github.io/shane/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://johnwuelk.github.io/shane/tags/index/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Markdown</title>
+      <link>https://johnwuelk.github.io/shane/tags/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://johnwuelk.github.io/shane/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Text</title>
+      <link>https://johnwuelk.github.io/shane/tags/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://johnwuelk.github.io/shane/tags/text/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
