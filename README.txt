@@ -1,1 +1,1 @@
-Website built via SSG Hugo
+Website built via SSG technology
